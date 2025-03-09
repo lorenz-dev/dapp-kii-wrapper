@@ -1,0 +1,1 @@
+export const WKII_CONTRACT_ADDRESS = '0xd51e7187e54a4A22D790f8bbDdd9B54b891Bc920' as const
