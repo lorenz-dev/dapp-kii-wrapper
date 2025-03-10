@@ -25,14 +25,13 @@ export function useWrapToken({
   })
 
   const execute = async () => {
-    console.info({ amount })
     if (amount === null) return
 
     const _txHash = await writeContractAsync({
       address: WKII_CONTRACT_ADDRESS,
       functionName: 'deposit',
       abi: parseAbi([
-        'function deposit()',
+        'function deposit() payable',
       ]),
       value: amount,
       chainId: chainId,

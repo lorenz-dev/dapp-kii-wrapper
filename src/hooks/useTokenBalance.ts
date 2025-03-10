@@ -37,10 +37,10 @@ export function useTokenBalance({
   })
 
   const _data: {
-    decimals: number;
+    decimals?: number;
     formatted: string;
-    symbol: string;
-    value: bigint;
+    symbol?: string;
+    value?: bigint;
   } | undefined = useMemo(() => {
     if (!data) return undefined
 

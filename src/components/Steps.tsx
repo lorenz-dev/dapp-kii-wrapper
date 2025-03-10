@@ -1,5 +1,5 @@
 import { FunctionComponent, PropsWithChildren } from 'react'
-import { Alert, Box, Typography, useTheme } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material'
 import { CircleCheck, CircleEllipsis, CircleX } from 'lucide-react'
 
 export type StepsProps = PropsWithChildren<{

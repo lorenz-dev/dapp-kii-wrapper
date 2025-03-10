@@ -1,18 +1,11 @@
 import { Box, Grid2, useTheme } from '@mui/material'
-import logoKii from '/logo.png'
-import logoWhiteKii from '/logo_white.png'
 import { useWalletConnector } from './providers/WalletConnector'
 import { WrapperContainer } from './components/WrapperContainer'
 
 function App() {
   const theme = useTheme()
-  const isDarkMode = theme.palette.mode === 'dark'
 
   const { connector } = useWalletConnector()
-
-  const logo = isDarkMode
-    ? <img src={logoWhiteKii} alt="/Logo_Kii_2024.png" width="100%" />
-    : <img src={logoKii} alt="/Logo_Kii_2024.png" width="100%" />
 
   return (
     <Box
@@ -35,7 +28,11 @@ function App() {
           maxWidth: '100px',
         }}>
           <a href="https://kiichain.io/" target="_blank">
-            {logo}
+            <img
+              src="https://raw.githubusercontent.com/lorenz-dev/dapp-kii-wrapper/refs/heads/main/public/logo_white.png"
+              alt="https://raw.githubusercontent.com/lorenz-dev/dapp-kii-wrapper/refs/heads/main/public/logo_white.png"
+              width="100%"
+            />
           </a>
         </Box>
 
