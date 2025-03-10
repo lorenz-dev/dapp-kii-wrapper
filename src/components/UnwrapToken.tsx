@@ -49,14 +49,15 @@ export const UnwrapToken = () => {
         gridAutoFlow: 'column',
         justifyContent: 'space-between',
       }}>
-        <Typography>Wrapped Balance:</Typography>
-        <Box sx={{
-          display: 'grid',
-        }}>
-          <Typography>{isLoading && 'Loading ...'}</Typography>
-          <Typography>{balance?.formatted} {balance?.symbol}</Typography>
-          <Typography>{!isConnected && '--'}</Typography>
-        </Box>
+        <Typography variant="subtitle2" color="primary.light">
+          Native Balance:
+        </Typography>
+
+        {isLoading && <Button disabled loading />}
+
+        {balance && <Typography>{balance?.formatted} {balance?.symbol}</Typography>}
+
+        {!isConnected && <Typography>--</Typography>}
       </Box>
 
       {balanceError?.message && <Typography color="error">

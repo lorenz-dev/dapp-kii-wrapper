@@ -41,20 +41,14 @@ function App() {
 
       <Box
         sx={{
-          display: 'grid',
-          justifyContent: 'center',
-          alignItems: 'center',
+          width: 'min(600px, 100% - 1rem)',
+          marginBlock: 'auto',
+          marginInline: 'auto',
+          backgroundColor: theme.palette.secondary.main,
+          borderRadius: theme.shape.borderRadius,
         }}
       >
-        <Box
-          sx={{
-            width: '600px',
-            backgroundColor: theme.palette.secondary.main,
-            borderRadius: theme.shape.borderRadius,
-          }}
-        >
-          <WrapperContainer />
-        </Box>
+        <WrapperContainer />
       </Box>
     </Box>
   )
